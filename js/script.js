@@ -6,8 +6,6 @@ $('#chooseFile').bind('change', function () {
     }
     else {
         $(".file-upload").addClass('active');
-        $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+        $("#noFile").text(filename.replace("C:\\fakepath\\", "").substring(0, 20) + "..." + filename.split('.').at(-1));
     }
 });
-
-// $('.input-group.date').datepicker({ format: "dd.mm.yyyy" }); 
